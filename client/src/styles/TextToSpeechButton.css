@@ -1,0 +1,27 @@
+.TextToSpeechButton {
+    background-color:var(--light-blue);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    left: 610px;
+  }
+  
+  .TextToSpeechButton:hover {
+    background-color: lightblue;
+  }
+  
+  .TextToSpeechButton:active {
+    background-color: #005cbf;
+  }
+  
+  .TextToSpeechButton img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 5px;
+  }
