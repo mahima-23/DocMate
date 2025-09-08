@@ -1,14 +1,21 @@
 {
   "name": "docmate",
   "version": "2.0.0",
-  "description": "Doctor appointment website",
+  "description": "Doctor appointment website - Full Stack Application",
   "main": "server.js",
+  "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix ./client ",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "install-all": "npm install && npm run install-client",
+    "clean": "rm -rf node_modules package-lock.json client/node_modules client/package-lock.json",
+    "fresh-install": "npm run clean && npm run install-all",
+    "vercel-build": "cd client && npm install && npm run build"
   },
   "author": "DocMate",
   "license": "ISC",
@@ -20,5 +27,9 @@
     "jsonwebtoken": "^9.0.0",
     "mapbox-gl": "^2.13.0",
     "mongoose": "^6.9.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "nodemon": "^3.1.10"
   }
 }
